@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="VITS Organizational Shirt Design Competition top 5 finalist selection exhibition.">
+    <title>VITS Shirt Design Competition | Top 5 Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 id="top">VITS Organizational Shirt Design Competition Entries</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="section intro" id="process">
+            <div class="container">
+                <div class="brief-layout">
+                    <div class="brief-copy">
+                        <p class="eyebrow"></p>
+                        <p class="brief-text">Good day, esteemed faculty members!</p>
+                        <p class="brief-text">We sincerely invite you to participate in the evaluation of the submitted
+                            Organizational Shirt Designs for the VITS Organizational Shirt Design Competition.</p>
+                        <p class="brief-text">Your evaluation will help determine the Top 5 designs that will advance to
+                            the Final Voting Stage, where all IT students of Pamantasan ng Lungsod ng Valenzuela will
+                            have the opportunity to vote for the design that will become the official VITS
+                            Organizational Shirt.</p>
+                        <p class="brief-text">We kindly ask you to review each submitted design carefully and select the
+                            entries that you believe best represent the identity, values, and objectives of the VITS
+                            organization and the IT community.</p>
+                        <p class="brief-text">Your professional insight and judgment are greatly valued in helping us
+                            select the Top 5 finalists.</p>
+                        <p class="brief-text">Thank you for your time, effort, and valuable contribution to this
+                            activity. 💙</p>
+                        <p class="brief-closing"><strong>Let's find the design that best represents VITS.</strong></p>
+                    </div>
+                    <aside class="criteria-card" aria-label="Evaluation criteria">
+                        <p class="eyebrow">Evaluation criteria</p>
+                        <p class="criteria-intro">The entries will be evaluated based on the following criteria:</p>
+                        <br>
+                        <ul class="brief-criteria">
+                            <li>🎨 <strong>Aesthetics</strong> <span>40%</span></li>
+                            <li>💡 <strong>Relevance to the Organization's Core Principles and Objectives</strong>
+                                <span>50%</span></li>
+                            <li>✨ <strong>Sense of Style</strong> <span>10%</span></li>
+                        </ul>
+                        <p class="criteria-total"><strong>Total</strong> <span>100%</span></p>
+                    </aside>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section" id="entries">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Select an entry to view </p>
+                        <h2>Design Entries</h2>
+                    </div>
+                </div>
+                <div class="gallery-grid" id="gallery" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section vote-section" id="vote">
+            <div class="container vote-layout">
+                <div>
+                    <p class="eyebrow" style="color: var(--cyan);">The next step</p>
+                    <h2>Select the Top 5 Designs</h2>
+                    <p class="lede">After reviewing all entries and their design concepts, please submit your evaluation
+                        through the official faculty voting form.</p>
+                    <div class="vote-actions"><a class="vote-button" data-form-link
+                            href="https://forms.gle/Mc8nyqFe4FLjEMTD7" target="_blank" rel="noopener">Cast your vote
+                            <span aria-hidden="true">↗</span></a></div>
+                </div>
+                <div class="qr-box">
+                    <p class="eyebrow">Scan to vote</p><img id="qrcode" src="assets/qr-code.png"
+                        alt="QR code for the faculty evaluation form">
+                    <p>Scan the QR code using your phone to access the faculty evaluation form.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reminder">
+            <div class="container">
+                <p class="eyebrow">Important reminder</p>
+                <p>Please review each entry and its corresponding explanation carefully before submitting your
+                    evaluation. Your professional judgment will help determine the Top 5 designs that will represent the
+                    VITS community in the final student voting stage.</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="overlay" id="detail-overlay" role="dialog" aria-modal="true" aria-hidden="true"
+        aria-label="Design details">
+        <div class="modal-panel"><button class="close-button" id="detail-close" type="button"
+                aria-label="Close design details">×</button>
+            <div id="detail-content"></div>
+        </div>
+    </div>
+
+    <div class="overlay lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true"
+        aria-label="Image viewer">
+        <button class="close-button" id="lightbox-close" type="button" aria-label="Close image viewer">×</button>
+        <div class="lightbox-stage"><img id="lightbox-image" alt=""></div>
+        <div class="lightbox-controls" aria-label="Image controls"><button class="icon-button" id="zoom-out"
+                type="button" aria-label="Zoom out">−</button><button class="icon-button" id="zoom-reset" type="button"
+                aria-label="Reset zoom">Reset</button><button class="icon-button" id="zoom-in" type="button"
+                aria-label="Zoom in">+</button><span class="zoom-label" id="zoom-label">100%</span></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
