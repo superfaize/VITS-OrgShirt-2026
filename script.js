@@ -97,7 +97,7 @@ function openDetail(index) {
   detailContent.innerHTML = `
     <div class="modal-entry">
       <img class="shirt-image" src="${entry.image}" alt="Entry #${entry.number} design" data-fallback-label="ENTRY #${entry.number}">
-      <div class="modal-copy"><span class="entry-badge">Entry #${entry.number}</span><div class="entry-meta"><p><strong>Name:</strong> ${entry.name}</p><p><strong>Section:</strong> ${entry.section}</p></div><p>${entry.explanation}</p>${explanationImages}</div>
+      <div class="modal-copy"><span class="entry-badge">Entry #${entry.number}</span><p>${entry.explanation}</p>${explanationImages}</div>
     </div>`;
   detailContent.querySelectorAll("img").forEach((image) => {
     useImageFallback(image, image.dataset.fallbackLabel);
