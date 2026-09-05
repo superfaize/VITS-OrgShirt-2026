@@ -17,7 +17,7 @@ Together, every element tells one story: that VITS is a community supported by i
 In summary, this represents how technology can become dangerous when overused. The phoenix holding its logo close to its chest symbolizes self-trust and pride, reminding us that humans should be the ones controlling technology, rather than allowing technology to control them.
 
 At the back, the spines were extended as it held the two sources of knowledge. Then while holding it shows that it forms V as part of our identity as valenzuelanos.` },
-  { number: "03", name: "Hizon, Harold A.", section: "1-14", image: "design-entryies/Harold Zon - VITS Shirt - Harold Zon.jpg", explanation: "Design brief by Harold Zon.", explanationImages: [
+  { number: "03", name: "Hizon, Harold A.", section: "1-14", image: "design-entryies/Harold Zon - VITS Shirt - Harold Zon.jpg", explanation: "Design brief", explanationImages: [
     "explanation-images/Harold Zon - VITS Shirt Brief Explanation - Harold Zon_page-0001.jpg",
     "explanation-images/Harold Zon - VITS Shirt Brief Explanation - Harold Zon_page-0002.jpg"
   ] },
