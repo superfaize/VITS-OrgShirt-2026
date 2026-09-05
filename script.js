@@ -146,8 +146,30 @@ function setupQrCode() {
   document.querySelectorAll("[data-form-link]").forEach((link) => link.href = GOOGLE_FORM_URL);
 }
 
+function setupContentReveal() {
+  const contentElements = document.querySelectorAll("main > section .container > *");
+  const observer = new IntersectionObserver((entries, revealObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  contentElements.forEach((element) => {
+    element.classList.add("content-reveal");
+    observer.observe(element);
+    if (element.getBoundingClientRect().top < window.innerHeight) {
+      element.classList.add("is-visible");
+      observer.unobserve(element);
+    }
+  });
+}
+
 renderGallery();
 setupQrCode();
+setupContentReveal();
 document.querySelector("#detail-close").addEventListener("click", closeDetail);
 document.querySelector("#lightbox-close").addEventListener("click", closeLightbox);
 document.querySelector("#zoom-in").addEventListener("click", () => { zoom = Math.min(zoom + .25, 3); updateLightbox(); });

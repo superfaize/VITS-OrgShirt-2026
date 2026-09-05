@@ -72,6 +72,25 @@ a {
     padding: 100px 0;
 }
 
+.content-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.content-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 .section-heading {
     display: flex;
     justify-content: space-between;
@@ -113,19 +132,20 @@ h2 {
 }
 
 .hero {
-    background: linear-gradient(118deg, #190d74 0%, #2c1e91 58%, #5146b8 100%);
+    background: linear-gradient(45deg, #190d74 0%, #f87907 100%);
+    background-size: 200% 200%;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
     color: var(--white);
+    animation: gradient-shift 8s ease alternate infinite;
     overflow: hidden;
     position: relative;
 }
 
 .hero::before {
-    background: radial-gradient(circle at 12% 25%, rgba(248, 121, 7, .8) 0 2px, transparent 3px), radial-gradient(circle at 84% 72%, rgba(255, 255, 255, .24) 0 1px, transparent 2px), linear-gradient(135deg, transparent 0 48%, rgba(255, 255, 255, .08) 49% 50%, transparent 51% 100%);
-    background-size: 150px 150px, 110px 110px, 100% 100%;
+    background: none;
     content: "";
     inset: 0;
-    opacity: .8;
+    opacity: 0;
     pointer-events: none;
     position: absolute;
 }
@@ -267,7 +287,7 @@ h2 {
 }
 
 #entries {
-    background: linear-gradient(145deg, #f87907 0%, #fff8f0 38%, #ffffff 54%, #190d74 100%);
+    background: linear-gradient(135deg, #ffdbbc 0%, #ffffff 58%, #fffaf5 100%);
     padding-top: 56px;
     position: relative;
 }
@@ -590,6 +610,30 @@ h2 {
     }
 }
 
+@keyframes qrGlow {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 @media (max-width: 800px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -676,12 +720,3 @@ h2 {
     }
 }
 
-@keyframes qrGlow {
-    from {
-        background-position: 0% 50%;
-    }
-
-    to {
-        background-position: 100% 50%;
-    }
-}
