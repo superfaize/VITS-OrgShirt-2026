@@ -705,13 +705,17 @@ h2 {
         padding: 20px;
     }
 
+    .modal-panel {
+        max-height: 96vh;
+    }
+
     .shirt-image {
         height: auto;
         max-height: 48vh;
     }
 
     .modal-copy {
-        max-height: 28vh;
+        max-height: 34vh;
         padding: 0 8px 0 0;
     }
 
